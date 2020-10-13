@@ -13,7 +13,7 @@ class Register extends Component {
             email: "",
             password: "",
             password2: "",
-            error: {}
+            errors: {}
         };
     }
 
@@ -36,7 +36,7 @@ class Register extends Component {
         this.setState({ [e.target.id]: e.target.value })
     };
 
-    onSubmit = e => {
+    onSubmit = e => { 
         e.preventDefault();
 
         const newUser = {
@@ -48,7 +48,7 @@ class Register extends Component {
         this.props.registerUser(newUser, this.props.history);
     };
     render() {
-        const { error } = this.state;
+        const { errors } = this.state;
         return (
             <div className="container">
                 <div className="row">
@@ -69,57 +69,57 @@ class Register extends Component {
                                 <input
                                     onChange={this.onChange}
                                     value={this.state.name}
-                                    error={error.name}
+                                    error={errors.name}
                                     id="name"
                                     type="text"
                                     className={classnames("", {
-                                        invalid: error.name
+                                        invalid: errors.name
                                     })}
                                 />
                                 <label htmlFor="name">Name</label>
-                                <span className="red-text">{error.name}</span>
+                                <span className="red-text">{errors.name}</span>
                             </div>
                             <div className="input-field col s12">
                                 <input
                                     onChange={this.onChange}
                                     value={this.state.email}
-                                    error={error.email}
+                                    error={errors.email}
                                     id="email"
                                     type="email"
                                     className={classnames("", {
-                                        invalid: error.email
+                                        invalid: errors.email
                                     })}
                                 />
                                 <label htmlFor="email">Email</label>
-                                <span className="red-text">{error.email}</span>
+                                <span className="red-text">{errors.email}</span>
                             </div>
                             <div className="input-field col s12">
                                 <input
                                     onChange={this.onChange}
                                     value={this.state.password}
-                                    error={error.password}
+                                    error={errors.password}
                                     id="password"
                                     type="password"
                                     className={classnames("", {
-                                        invalid: error.password
+                                        invalid: errors.password
                                     })}
                                 />
                                 <label htmlFor="password">Password</label>
-                                <span className="red-text">{error.password}</span>
+                                <span className="red-text">{errors.password}</span>
                             </div>
                             <div className="input-field col s12">
                                 <input
                                     onChange={this.onChange}
                                     value={this.state.password2}
-                                    error={error.password2}
+                                    error={errors.password2}
                                     id="password2"
                                     type="password"
                                     className={classnames("", {
-                                        invalid: error.password2
+                                        invalid: errors.password2
                                     })}
                                 />
                                 <label htmlFor="password2">Confirm Password</label>
-                                <span className="red-text">{error.password2}</span>
+                                <span className="red-text">{errors.password2}</span>
                             </div>
                             <div className="col s12" style={{ paddingLeft: "11.250px" }}>
                                 <button

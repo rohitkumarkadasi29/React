@@ -9,10 +9,13 @@ import {
 } from './types';
 
 // Register User
-export const registerUser = (userData, history) => dispatch => {
+export const registerUser = (userData, history) => dispatch => { 
     axios
-        .post("/api/user/register", userData)
-        .then(res => history.push("./login"))
+        .post("http://localhost:5000/api/users/register", userData)
+        .then(res => {
+            console.log("res==>",res)
+            history.push("./login")
+        })
         // re-direct to login on successful register
 
         .catch(err =>

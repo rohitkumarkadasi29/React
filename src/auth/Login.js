@@ -22,6 +22,9 @@ class Login extends Component {
             this.props.history.push("/dasdboard");
         }
     }
+    onChange = e => {
+        this.setState({ [e.target.id]: e.target.value })
+    };
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.auth.isAuthenticated) {
