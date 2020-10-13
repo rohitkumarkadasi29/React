@@ -56,7 +56,7 @@ class Login extends Component {
                         </Link>
                         <div className="col s12" style={{ padding: "11.250px" }}>
                             <h4>
-                                <b>Register</b> below
+                                <b>Login</b> below
                             </h4>
                             <p className="grey-text text-darken-1">Already have an account?
                             <Link to="/login">Login</Link>
