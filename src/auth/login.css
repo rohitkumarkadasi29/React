@@ -1,0 +1,87 @@
+.back-to-home {
+    text-transform: uppercase;
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+    margin: 2px;
+}
+.login-wrapper {
+    width: 30%;
+    margin: 80px auto;
+    padding: 30px;
+    box-shadow: 0px 0px 7px
+}
+.email-password-input {
+    border: none;
+    padding: 15px 20px;
+    width: 82%;
+    margin: 0px 10px;
+    border-bottom: 1px solid black;
+}
+.password-wrapper {
+    margin-top: 25px;
+}
+.errors-wrapper {
+    font-size: 13px;
+    color: red;
+    display: flex;
+    margin-left: 20px;
+}
+.adjust {
+    margin-left: 35px;
+}
+.email-password-input:focus {
+    outline: none;
+    border-bottom: 3px solid black;
+}
+.form-container {
+    text-align: center;
+}
+.heading-login {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 50px 0px 30px 0px;
+}
+.text-message {
+    color: black;
+    font-size: 13px;
+    margin-top: 40px;
+}
+.redirector {
+    color: blue;
+    font-size: 14px;
+    text-decoration: none;
+}
+.redirector:active {
+    text-decoration: underline;
+    color: red;
+}
+.link {
+    text-decoration: none;
+    display: flex;
+}
+.back-to-home:hover {
+    text-decoration: underline;
+}
+.back-to-home:active {
+    font-weight: 500;
+}
+.login-button {
+        padding: 13px;
+        border: none;
+        cursor: pointer;
+        font-size: 13px;
+        text-transform: uppercase;
+        color: black;
+        border-radius: 7px;
+        background-color: white;
+        margin-top: 20px;
+        box-shadow: 0px 0px 3px;
+}
+.login-button:hover {
+    background-color: black;
+    color: white;
+}
+.login-button:focus {
+    outline: none;
+}

@@ -3,15 +3,17 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import { Provider } from "react-redux";
 
+
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logOutUser } from "./action/authActions";
 import store from "./store";
-import Navbar from "./Component/Layout/Navbar";
 import Landing from "./Component/Layout/Landing";
 import Register from "./auth/Register";
 import Login from "./auth/Login";
 import PrivateRoute from "./Component/private-route/PrivateRoute";
 import Dashboard from "./Component/dashboard/Dashboard";
+import Students from "./Component/students/students";
+import Employees from './Component/employee/employee';
 
 
 // Check for token to keep user logged in
@@ -38,13 +40,17 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div className="App">
-            <Navbar />
+         
             <Route exact path="/" component={Landing} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
+
             <Switch>
-              <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              <PrivateRoute  path="/dashboard" component={Dashboard} />
             </Switch>
+            <Route  path="/dashboard/students" component={Students} />
+            <Route  path="/dashboard/employee" component={Employees} />
+
           </div>
         </Router>
       </Provider>

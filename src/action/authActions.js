@@ -30,7 +30,7 @@ export const registerUser = (userData, history) => dispatch => {
 
 export const loginUser = userData => dispatch => {
     axios
-        .post("/api/users/login", userData)
+        .post("http://localhost:5000/api/users/login", userData)
         .then(res => {
             // Save to localStorage
 
@@ -47,7 +47,7 @@ export const loginUser = userData => dispatch => {
             // Set current user
             dispatch(setCurrentUser(decoded));
         })
-        .catch(err =>
+        .catch(err => 
             dispatch({
                 type: GET_ERRORS,
                 payload: err.response.data

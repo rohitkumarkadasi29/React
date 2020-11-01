@@ -1,0 +1,8 @@
+.register-wrapper {
+    width: 35%;
+    margin: 37px auto;
+    padding: 25px;
+    box-shadow: 0px 0px 7px;
+    position: fixed;
+    left: 470px;
+}

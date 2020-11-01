@@ -1,0 +1,51 @@
+.student-container {
+    position: relative;
+    margin-left: 253px;
+    margin-top: 50px;;
+}
+.student-form-btn {
+    position: absolute;
+    right: 35px;
+}
+.icon-wrapper {
+    color: green;
+    font-size: 20px;
+}
+.icon-modifier {
+    color: red;
+    font-size: 20px;
+}
+button.btn.btn-primary {
+    margin-left: 18px;
+}
+button.btn.btn-secondary {
+    margin-left: 290px;
+}
+.btn.btn-primary.btn-add {
+    border: none;
+    color: white;
+    background: red;
+}
+.view-details-wrapper {
+    color: #6c757d;
+    font-size: 17px;
+    font-weight: 500;
+}
+.view-value {
+    font-weight: 400;
+}
+.view-header-wrapper {
+    color: #6c757d;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-weight: 400;
+}
+button.btn.btn-secondary.btn-view {
+    margin-left: 376px;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.view-container {
+    margin-left: 30px;
+}

@@ -1,0 +1,10 @@
+.employee-container {
+    position   : relative;
+    margin-left: 253px;
+    margin-top : 50px;
+}
+
+.employee-form-btn {
+    position: absolute;
+    right   : 35px;
+}

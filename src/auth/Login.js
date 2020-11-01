@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { loginUser } from '../action/authActions';
 import classnames from 'classnames';
+import './login.css';
 
 
 class Login extends Component {
@@ -51,70 +52,75 @@ class Login extends Component {
         const { errors } = this.props;
 
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col s8 offset-s2">
-                        <Link to="/" className="btn-flat waves-effect">
-                            <i className="material-icons left">keyboard_backspace</i> Back to home
+            <div className="">
+                <div className="">
+                    <div className="login-wrapper">
+                        <Link to="/" className="link">
+                            <i className="material-icons">keyboard_backspace</i><span className="back-to-home"> Back to home</span>
                         </Link>
-                        <div className="col s12" style={{ padding: "11.250px" }}>
-                            <h4>
-                                <b>Login</b> below
+                        <div className="form-container">
+                            <div className="" style={{ padding: "11.250px" }}>
+                                <h4 className="heading-login">
+                                    <b>Login</b>
                             </h4>
-                            <p className="grey-text text-darken-1">Already have an account?
-                            <Link to="/login">Login</Link>
-                            </p>
-                        </div>
-                        <form onValidate onSubmit={this.onSubmit}>
-                            <div className="input-field col s12">
-                                <input
-                                    onChange={this.onChange}
-                                    value={this.state.email}
-                                    errors={errors.email}
-                                    id="email"
-                                    type="email"
-                                    className={classnames("", {
-                                        invalid: errors.email || errors.emailnotfound
-                                    })}
-                                />
-                                <label htmlFor="email">Email</label>
-                                <span className="red-text">
-                                    {errors.email}
-                                    {errors.emailnotfound}
-                                </span>
                             </div>
-                            <div className="input-field col s12">
-                                <input
-                                    onChange={this.onChange}
-                                    value={this.state.password}
-                                    errors={errors.password}
-                                    id="password"
-                                    type="password"
-                                    className={classnames("", {
-                                        invalid: errors.password || errors.passwordincorrect
-                                    })}
-                                />
-                                <label htmlFor="password">Password</label>
-                                <span className="red-text">
-                                    {errors.password}
-                                    {errors.passwordincorrect}
-                                </span>
-                            </div>
-                            <div>
-                                <button
-                                    style={{
-                                        width: "150px",
-                                        borderRadius: "3px",
-                                        letterSpacing: "1.5px",
-                                        marginTop: "1 rem"
-                                    }}
-                                    type="submit"
-                                    className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-                                >
-                                    Login
+                            <form onValidate onSubmit={this.onSubmit}>
+                                <div className="">
+                                    <input
+                                        onChange={this.onChange}
+                                        value={this.state.email}
+                                        errors={errors.email}
+                                        id="email"
+                                        type="email"
+                                        className={classnames("", {
+                                            invalid: errors.email || errors.emailnotfound
+                                        })}
+                                        placeholder="Email"
+                                        className="email-password-input"
+                                    />
+
+                                    <span className="errors-wrapper adjust">
+                                        {errors.email}
+                                        {errors.emailnotfound}
+                                    </span>
+                                </div>
+                                <div className="">
+                                    <input
+                                        onChange={this.onChange}
+                                        value={this.state.password}
+                                        errors={errors.password}
+                                        id="password"
+                                        type="password"
+                                        className={classnames("", {
+                                            invalid: errors.password || errors.passwordincorrect
+                                        })}
+                                        placeholder="Password"
+                                        className="email-password-input password-wrapper"
+                                    />
+                                    <span className="errors-wrapper adjust">
+                                        {errors.password}
+                                        {errors.passwordincorrect}
+                                    </span>
+                                </div>
+                                <div>
+                                <p className="text-message">Don't have an account?
+                            <Link to="/register" className="redirector">Register</Link>
+                                </p>
+                                    <button
+                                        style={{
+                                            width: "150px",
+                                            letterSpacing: "1.5px",
+                                            marginTop: "1 rem"
+                                        }}
+                                        type="submit"
+                                        className="login-button"
+                                    >
+                                        Login
                                 </button>
-                            </div>
-                        </form>
+
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -133,5 +139,5 @@ const mapStateToProps = state => ({
     errors: state.errors
 });
 
-export default connect(mapStateToProps, {loginUser}) (Login);
+export default connect(mapStateToProps, { loginUser })(Login);
 

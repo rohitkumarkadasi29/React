@@ -1,0 +1,41 @@
+/*  */
+.container {
+    background-image: url(../../images/logo2.jpg);
+    background-size: cover;
+    height: 100%;
+    /* max-width: 100%; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: fixed;
+}
+.logo2{
+    height: 100%;
+    width: 100%;
+}
+.loginBtn {
+    width: 140px;
+    border-radius: 3px;
+    letter-spacing: 1.5px;
+    height: 54px;
+    line-height: 54px;
+    font-size: 15px;
+    padding: 17px 37px;
+    margin-right: 30px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.loginBtn:hover {
+    background-color: rgb(218, 23, 218);
+    color: white;
+}
+.loginBtn:active {
+    text-decoration: underline;
+}
+
+
+@media (min-width: 1200px) {
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 100% !important;
+}
+}
